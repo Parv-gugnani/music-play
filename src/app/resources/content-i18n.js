@@ -10,7 +10,7 @@ const createI18nContent = (t) => {
         role:      t("person.role"),
         avatar:    '/images/avatar.jpg',
         location:  'Asia/India',     
-        languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
+        languages: ['English', 'Hindi']  // optional: Leave the array empty if you don't want to display languages
     }
 
     const newsletter = {
@@ -20,8 +20,6 @@ const createI18nContent = (t) => {
     }
 
     const social = [
-        // Links are automatically displayed.
-        // Import new icons in /once-ui/icons.ts
         {
             name: 'GitHub',
             icon: 'github',

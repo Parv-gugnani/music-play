@@ -8,14 +8,14 @@ const person = {
     },
     role:      'Full Stack Developer',
     avatar:    '/images/avatar.jpg',
-    location:  'Asia/India', 
-    languages: ['Hindi', 'English']
+    location:  'Asia/India',
+    languages: ['Hindi', 'English', 'JavaScript', 'TypeScript']
 }
 
 const newsletter = {
     display: true,
-    title: <>Subscribe to {person.firstName}'s Newsletter</>,
-    description: <>Join my newsletter for insights on Web Development, creative engineering, and the latest in frameworks like Next.js and Node.js!</>
+    title: <>Join {person.firstName}'s Tech Insights Weekly</>,
+    description: <>Get exclusive deep-dives into modern web architecture, performance optimization tricks, and hands-on tutorials. Plus, early access to my upcoming projects and tech resources!</>
 }
 
 const social = [
@@ -44,15 +44,15 @@ const social = [
 const home = {
     label: 'Home',
     title: `${person.name}`,
-    description: `Portfolio website showcasing my work as a ${person.role}`,
+    description: `Crafting high-performance web applications and digital experiences`,
     headline: <>Full Stack Developer</>,
-    subline: <>I'm Parv, a Full Stack Developer with a passion for <InlineCode>Next.js</InlineCode> and backend technologies.<br/> I love building impactful projects and experimenting with new tech stacks 🚀.</>
+    subline: <>Hey! I'm Parv, a Full Stack Developer who transforms ideas into scalable solutions. Specializing in <InlineCode>Next.js</InlineCode>, modern JavaScript, and cloud architecture.<br/>I build lightning-fast web apps that users love and businesses rely on. Let's create something amazing together! 💻✨</>
 }
 
 const about = {
     label: 'About',
     title: 'About me',
-    description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+    description: `Meet ${person.name}, a solution-focused ${person.role} crafting digital experiences from ${person.location}`,
     tableOfContent: {
         display: true,
         subItems: true
@@ -67,7 +67,7 @@ const about = {
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>Parv is an India-based full-stack developer with a passion for building responsive, scalable web applications. Skilled in React, Node.js, and MongoDB, his work focuses on creating seamless user experiences and efficient solutions. Parv enjoys exploring new technologies and crafting applications that merge creativity with functionality.</>
+        description: <>As a full-stack developer based in India, I specialize in building performant, scalable web applications that solve real business problems. With deep expertise in React and Node.js ecosystems, I focus on creating solutions that not only work flawlessly but also drive business growth. Whether it's optimizing load times, implementing complex features, or architecting robust systems, I bring a strategic approach to every project.</>
     },
     work: {
         display: true,
@@ -76,7 +76,7 @@ const about = {
             {
                 company: 'MillionNeuron',
                 timeframe: 'April 2022 - Jun 2022',
-                role: 'Game Developer Intern',
+                role: 'Front Engineer Intern',
                 achievements: [
                     <>Collaborated with the development team to create an educational game using Blueprints and C++, enhancing students' learning experience through practical application.</>,
                     <>Contributed to the development of showcase demos for investors, demonstrating the game's potential and value proposition.</>
@@ -119,7 +119,7 @@ const about = {
                 ],
                 images: []
             }
-        ]        
+        ]
     },
     studies: {
         display: true, // set to false to hide this section
@@ -137,79 +137,54 @@ const about = {
                 name: 'Scaler',
                 description: <>PG Diploma, Software Engineering | 7 CGPA | 2024 - 2025</>,
             }
-        ]    
+        ]
     },
     technical: {
-        display: true, // set to false to hide this section
-        title: 'Technical Skills',
+        display: true,
+        title: 'Technical Expertise',
         skills: [
             {
-                title: 'React.js',
-                description: <>Proficient in building dynamic, responsive UIs with React.js for web applications.</>,
+                title: 'Next.js & React',
+                description: <>Expert in building production-grade applications with Next.js 13+. Specialized in server components, dynamic routing, and optimal rendering strategies for maximum performance.</>,
                 images: []
             },
             {
-                title: 'Node.js',
-                description: <>Experienced in backend development with Node.js, creating REST APIs and handling server-side logic.</>,
+                title: 'Full Stack Development',
+                description: <>Proven track record in developing end-to-end solutions using Node.js, Express, and MongoDB. Strong focus on API design, security best practices, and scalable architecture.</>,
                 images: []
             },
             {
-                title: 'JavaScript (ES5/ES6)',
-                description: <>Skilled in JavaScript, with a strong understanding of ES6+ features for modern web development.</>,
+                title: 'Modern JavaScript & TypeScript',
+                description: <>Advanced proficiency in ES6+ features and TypeScript. Experienced in building type-safe, maintainable codebases that scale.</>,
                 images: []
             },
             {
-                title: 'MongoDB',
-                description: <>Hands-on experience with MongoDB for efficient data management and schema design in full-stack applications.</>,
+                title: 'Performance Optimization',
+                description: <>Skilled in implementing advanced optimization techniques including code splitting, lazy loading, and caching strategies for optimal user experience.</>,
                 images: []
             },
             {
-                title: 'TypeScript',
-                description: <>Experienced in TypeScript for building robust, scalable applications with type safety.</>,
+                title: 'State Management & Architecture',
+                description: <>Expert in Redux, Context API, and modern state management patterns. Strong understanding of clean architecture principles and design patterns.</>,
                 images: []
             },
             {
-                title: 'TailwindCSS',
-                description: <>Skilled in TailwindCSS for rapid, responsive UI design with utility-first CSS.</>,
+                title: 'UI/UX Implementation',
+                description: <>Proficient in TailwindCSS and modern CSS features. Creating responsive, accessible, and pixel-perfect interfaces that engage users.</>,
                 images: []
             },
             {
-                title: 'Express.js',
-                description: <>Experienced in Express.js for developing RESTful APIs and managing backend infrastructure.</>,
+                title: 'Database Design',
+                description: <>Experienced in both SQL and NoSQL databases. Skilled in data modeling, query optimization, and implementing efficient data access patterns with Prisma and raw queries.</>,
                 images: []
             },
             {
-                title: 'MySQL',
-                description: <>Knowledgeable in MySQL for relational database management and efficient query design.</>,
-                images: []
-            },
-            {
-                title: 'Redux',
-                description: <>Experienced with Redux for state management in complex React applications.</>,
-                images: []
-            },
-            {
-                title: 'Prisma ORM',
-                description: <>Skilled in Prisma ORM for database management and schema modeling with TypeScript integration.</>,
+                title: 'Testing & Quality Assurance',
+                description: <>Strong advocate for automated testing using Jest and React Testing Library. Implementing comprehensive test coverage for reliable deployments.</>,
                 images: []
             }
         ]
     }
-    
-    //         {
-    //             title: 'Next.js',
-    //             description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-    //             images: [
-    //                 {
-    //                     src: '/images/projects/project-01/cover-04.jpg',
-    //                     alt: 'Project image',
-    //                     width: 16,
-    //                     height: 9
-    //                 },
-    //             ]
-    //         }
-    //     ]
-    // }
 }
 
 const blog = {
@@ -233,73 +208,73 @@ const gallery = {
     title: 'My photo gallery',
     description: `A photo collection by ${person.name}`,
     images: [
-        { 
-            src: '/images/gallery/img-01.jpg', 
+        {
+            src: '/images/gallery/img-01.jpg',
             alt: 'image',
             orientation: 'vertical'
         },
-        { 
-            src: '/images/gallery/img-02.jpg', 
+        {
+            src: '/images/gallery/img-02.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-03.jpg', 
+        {
+            src: '/images/gallery/img-03.jpg',
             alt: 'image',
             orientation: 'vertical'
         },
-        { 
-            src: '/images/gallery/img-04.jpg', 
+        {
+            src: '/images/gallery/img-04.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-05.jpg', 
+        {
+            src: '/images/gallery/img-05.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-06.jpg', 
+        {
+            src: '/images/gallery/img-06.jpg',
             alt: 'image',
             orientation: 'vertical'
         },
-        { 
-            src: '/images/gallery/img-07.jpg', 
+        {
+            src: '/images/gallery/img-07.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-08.jpg', 
+        {
+            src: '/images/gallery/img-08.jpg',
             alt: 'image',
             orientation: 'vertical'
         },
-        { 
-            src: '/images/gallery/img-09.jpg', 
+        {
+            src: '/images/gallery/img-09.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-10.jpg', 
+        {
+            src: '/images/gallery/img-10.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-11.jpg', 
+        {
+            src: '/images/gallery/img-11.jpg',
             alt: 'image',
             orientation: 'vertical'
         },
-        { 
-            src: '/images/gallery/img-12.jpg', 
+        {
+            src: '/images/gallery/img-12.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-13.jpg', 
+        {
+            src: '/images/gallery/img-13.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-14.jpg', 
+        {
+            src: '/images/gallery/img-14.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
