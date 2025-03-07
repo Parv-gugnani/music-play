@@ -1,6 +1,6 @@
 import { create } from "zustand";
 // eslint-disable-next-line no-restricted-imports
-import type { OrganizationStore,Region,AppliedFilters,SelectedFilters } from "../../../packages/types/api/organization";
+import type { OrganizationStore,Region,AppliedFilters,SelectedFilters } from ".";
 
 const initialFilters: SelectedFilters = {
   region: [],
@@ -15,10 +15,10 @@ export const useOrganizationStore = create<OrganizationStore>((set, get) => ({
   // Region actions
   setRegion: (region: Region) => {
     const { selectedFilters } = get();
-    const isAlreadySet = selectedFilters.region.find((r) => r.id === region.id);
+    const isAlreadySet = selectedFilters.region.find((r: { id: any; }) => r.id === region.id);
 
     if (isAlreadySet) {
-      const regions = selectedFilters.region.filter((r) => r.id !== region.id);
+      const regions = selectedFilters.region.filter((r: { id: any; }) => r.id !== region.id);
       set({ selectedFilters: { ...selectedFilters, region: regions } });
     } else {
       set({
